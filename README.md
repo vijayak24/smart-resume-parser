@@ -10,9 +10,44 @@ An AI-powered resume and portfolio analysis platform that evaluates candidate re
 [![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white)](https://spacy.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-[**GitHub Repository**](https://github.com/vijayak24/smart-resume-parser) • [**Report Bug**](https://github.com/vijayak24/smart-resume-parser/issues) • [**Request Feature**](https://github.com/vijayak24/smart-resume-parser/issues)
+<br/>
+
+[![Open Web App](https://img.shields.io/badge/🚀_Open_Web_App-Streamlit_UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](http://localhost:8501)
+[![API Swagger Docs](https://img.shields.io/badge/📚_API_Docs-FastAPI_Swagger-009688?style=for-the-badge&logo=fastapi&logoColor=white)](http://localhost:8000/docs)
+
+<br/>
+
+[**🚀 Open Web App**](http://localhost:8501) • [**📚 API Documentation**](http://localhost:8000/docs) • [**GitHub Repository**](https://github.com/vijayak24/smart-resume-parser) • [**Report Bug**](https://github.com/vijayak24/smart-resume-parser/issues) • [**Request Feature**](https://github.com/vijayak24/smart-resume-parser/issues)
 
 </div>
+
+---
+
+## 📖 About The Project
+
+**Smart Automated Resume & Portfolio Parser** is an intelligent candidate evaluation platform designed to bridge the gap between job seekers and recruiters. Traditional Applicant Tracking Systems (ATS) often rely on rigid, exact keyword matching, unfairly disqualifying qualified candidates due to slight phrasing differences or formatting quirks.
+
+This platform solves that problem by combining **dense sentence transformers** (`all-MiniLM-L6-v2`) with **industrial-grade linguistic NLP** (`spaCy`) to evaluate resumes contextually and compute true conceptual relevance.
+
+### 💡 Why Use This?
+- **Contextual Semantic Scoring**: Rather than naive keyword counts, our NLP engine maps candidate resumes and job descriptions into high-dimensional vector spaces, computing cosine similarity that recognizes equivalent skills and concepts.
+- **Granular Skill-Gap Analysis**: Automatically extracts technical competencies and categorizes them into **Matched Competencies** and **Missing Skill Gaps**, offering actionable insights to job seekers.
+- **Multi-Page PDF Parsing**: Seamlessly parses and sanitizes complex, multi-page CVs and portfolios using `PyPDF2`.
+- **Modern Interactive Web UI**: Powered by Streamlit with real-time score meters, animated status alerts, categorized skill badges, and clear gap recommendations.
+- **Decoupled Asynchronous Microservice**: Built with a high-throughput FastAPI REST backend and Swagger OpenAPI documentation.
+
+---
+
+## 🌐 Quick Access & Web Links
+
+Once the local servers are started, open any of the following URLs in your web browser:
+
+| Interface | Direct URL | Description |
+| :--- | :--- | :--- |
+| **🚀 Web Application (Dashboard)** | **[http://localhost:8501](http://localhost:8501)** | Interactive Streamlit UI to upload resumes, paste job descriptions, and view analysis results |
+| **📚 Interactive Swagger API Docs** | **[http://localhost:8000/docs](http://localhost:8000/docs)** | Live Swagger UI sandbox to explore and test REST endpoints |
+| **📖 Alternative ReDoc API Docs** | **[http://localhost:8000/redoc](http://localhost:8000/redoc)** | Clean, formal OpenAPI technical reference |
+| **❤️ Backend Health Check** | **[http://localhost:8000/health](http://localhost:8000/health)** | JSON health probe endpoint verifying backend status |
 
 ---
 
@@ -99,7 +134,7 @@ python -m spacy download en_core_web_sm
 ### Option A: One-Click Startup Scripts (Recommended)
 
 - **On Windows:**
-  Double-click `run.bat` or run:
+  Double-click `run.bat` or run in terminal:
   ```cmd
   run.bat
   ```
@@ -124,17 +159,6 @@ Start each service in a separate terminal:
    ```bash
    python -m streamlit run frontend/app.py --server.port 8501
    ```
-
----
-
-## 🌐 Services & URLs
-
-| Service | Address | Description |
-| :--- | :--- | :--- |
-| **Streamlit Dashboard** | [http://localhost:8501](http://localhost:8501) | Interactive frontend for uploading resumes and analyzing results |
-| **FastAPI REST API** | [http://localhost:8000](http://localhost:8000) | Backend microservice providing NLP parsing and inference |
-| **Swagger UI Docs** | [http://localhost:8000/docs](http://localhost:8000/docs) | Interactive API exploration and live test sandbox |
-| **ReDoc Documentation** | [http://localhost:8000/redoc](http://localhost:8000/redoc) | Clean, alternate API reference documentation |
 
 ---
 
